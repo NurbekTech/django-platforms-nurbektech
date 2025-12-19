@@ -5,10 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" href="{% static "css/reset.css" %}">
     <title>NurbekTech</title>
 </head>
 <body>
-    <h1>Django Projects</h1>
+    <header class="header">
+        <div class="container">
+            {% comment %} NAV {% endcomment %}
+            <div class="header-nav">
+                <a href="/" class="logo">NurbekTech</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">Wiki</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     {% block content %}{% endblock content %}
 </body>
