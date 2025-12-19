@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: "Google Sans", sans-serif;
     font-size: 20px;
+
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -35,4 +44,14 @@ body {
 .nav-link {
     font-weight: 300;
     color: #000000;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
 }
