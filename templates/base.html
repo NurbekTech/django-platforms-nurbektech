@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/base.css" %}">
     <link rel="stylesheet" href="{% static "css/reset.css" %}">
+
+    {% block home_css %}{% endblock home_css %}
     <title>NurbekTech</title>
 </head>
 <body>
+    {% comment %} HEADER {% endcomment %}
     <header class="header">
         <div class="container">
             {% comment %} NAV {% endcomment %}
@@ -25,16 +28,18 @@
         </div>
     </header>
 
+    {% comment %} MAIN CONTENT {% endcomment %}
     <main class="main">
-        {% block content %}{% endblock content %}  
+        <div class="container">
+            {% block content %}{% endblock content %}  
+        </div>
     </main>
 
-    
+    {% comment %} FOOTER {% endcomment %}
     <footer class="footer">
         <div class="container">
             FOOTERs
         </div>
-        
     </footer>
 </body>
 </html>
