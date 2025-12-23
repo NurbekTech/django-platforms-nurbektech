@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block home_css %}
+    <link rel="stylesheet" href="{% static 'wiki/css/wiki.css' %}">
+{% endblock home_css %}
+
+{% block content %}
+    <h1 class="wiki">Wiki Page</h1>
+{% endblock content %}
