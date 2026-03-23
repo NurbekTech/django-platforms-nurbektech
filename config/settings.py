@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "apps.courses",
+    "apps.pages",
     # other Django apps
     "tailwind",
     "ui",
