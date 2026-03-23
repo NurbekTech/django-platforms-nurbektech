@@ -1,19 +1,84 @@
-{% load static tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk" data-theme="nord">
 
 <head>
-    <title>Django Tailwind</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
+    <title>{% block title %}NurbekTech{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
 </head>
 
-<body>
-    <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    {% block content %}
-    {% endblock %}
+<body class="bg-base-100 text-base-content min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <header class="border-b border-base-200 bg-base-100/90 backdrop-blur sticky top-0 z-50">
+        <div class="navbar container mx-auto px-4">
+            <div class="navbar-start">
+                <a href="#" class="text-xl font-bold tracking-tight">
+                    Nurbek<span class="text-primary">Tech</span>
+                </a>
+            </div>
+
+            <div class="navbar-center hidden md:flex">
+                <ul class="menu menu-horizontal px-1 text-sm font-medium">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-end md:hidden">
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52 border border-base-200">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Lessons</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navbar-end hidden md:flex">
+                <a href="#" class="btn btn-primary btn-sm">Start Learning</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-base-200 bg-base-100">
+        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-4 justify-between items-center">
+            <div>
+                <p class="font-semibold">NurbekTech</p>
+                <p class="text-sm text-base-content/70">
+                    Robotics, IT and project-based learning platform.
+                </p>
+            </div>
+            <div class="flex gap-4 text-sm text-base-content/70">
+                <a href="#" class="link link-hover">Home</a>
+                <a href="#" class="link link-hover">About</a>
+                <a href="#" class="link link-hover">Projects</a>
+                <a href="#" class="link link-hover">Blog</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

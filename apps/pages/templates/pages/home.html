@@ -1,7 +1,88 @@
 {% extends "base.html" %}
 
+{% block title %}Home | NurbekTech{% endblock %}
 
 {% block content %}
-<h2 class="text-2xl font-bold">Сәлем, Дүние!</h2>
-<p class="text-gray-600">Бұл басты бет.</p>
+<section class="container mx-auto px-4 py-10 md:py-16">
+    <div class="hero bg-base-200 rounded-3xl">
+        <div class="hero-content text-center py-12 md:py-20">
+            <div class="max-w-2xl">
+                <span class="badge badge-primary badge-outline mb-4">Robotics • IT • Projects</span>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                    Текст сабақтар мен нақты проектілерге арналған
+                    <span class="text-primary">минималды платформа</span>
+                </h1>
+                <p class="py-6 text-base-content/75 text-base md:text-lg">
+                    Робототехника, бағдарламалау және IT бағытындағы сабақтарды
+                    жеңіл, таза және түсінікті форматта ұсынатын білім беру платформасы.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-3">
+                    <a href="#" class="btn btn-primary">Сабақтарды көру</a>
+                    <a href="#" class="btn btn-outline">Проектілер</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 pb-10 md:pb-16">
+    <div class="grid gap-6 md:grid-cols-3">
+        <div class="card bg-base-100 border border-base-200 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title">Text Lessons</h2>
+                <p class="text-sm text-base-content/70">
+                    Қысқа, нақты және жүйелі жазылған сабақтар. Артық визуалсыз, назар толық контентте.
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 border border-base-200 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title">Projects</h2>
+                <p class="text-sm text-base-content/70">
+                    Arduino, Python, Django және басқа да практикалық IT/робототехника проектілері.
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 border border-base-200 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title">Blog</h2>
+                <p class="text-sm text-base-content/70">
+                    Идеялар, түсіндірмелер, тәжірибе және development процесі туралы мақалалар.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 pb-16">
+    <div class="grid lg:grid-cols-2 gap-6 items-stretch">
+        <div class="card bg-base-200 border border-base-200">
+            <div class="card-body">
+                <h2 class="card-title text-2xl">Неге осы стиль?</h2>
+                <p class="text-base-content/75">
+                    Бұл дизайн оқуға ыңғайлы болу үшін жасалған: ақ фон, таза аралықтар,
+                    аз түстер, қарапайым навигация және мобильді құрылғыларға бейімделген layout.
+                </p>
+                <p class="text-base-content/75">
+                    Әсіресе текст сабақтар үшін минималды интерфейс ең дұрыс шешім.
+                </p>
+            </div>
+        </div>
+
+        <div class="card bg-primary text-primary-content">
+            <div class="card-body">
+                <h2 class="card-title text-2xl">Бастауға дайын</h2>
+                <p>
+                    Кейін осы home бетке latest lessons, featured projects, соңғы blog post,
+                    CTA блоктарын оңай қосуға болады.
+                </p>
+                <div class="card-actions justify-start mt-2">
+                    <a href="#" class="btn btn-neutral">Алғашқы сабақ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

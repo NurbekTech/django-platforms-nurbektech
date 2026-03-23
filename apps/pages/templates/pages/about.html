@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}About | NurbekTech{% endblock %}
+
+{% block content %}
+<section class="container mx-auto px-4 py-10 md:py-16">
+    <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+            <span class="badge badge-outline badge-primary mb-3">About platform</span>
+            <h1 class="text-3xl md:text-4xl font-bold">NurbekTech туралы</h1>
+            <p class="mt-4 text-base-content/75 text-lg">
+                Бұл платформа робототехника, IT және практикалық проектілерді
+                үйренуге арналған минималды оқу кеңістігі.
+            </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+            <div class="card bg-base-100 border border-base-200 shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Мақсат</h2>
+                    <p class="text-base-content/75">
+                        Оқушыларға және бастаушыларға күрделі тақырыптарды
+                        қарапайым түрде жеткізу. Теориядан кейін міндетті түрде практика.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card bg-base-100 border border-base-200 shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title">Бағыттар</h2>
+                    <p class="text-base-content/75">
+                        Robotics, Python, Web Development, Django, Arduino,
+                        алгоритмдік ойлау және project-based learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card bg-base-100 border border-base-200 shadow-sm md:col-span-2">
+                <div class="card-body">
+                    <h2 class="card-title">Негізгі идея</h2>
+                    <p class="text-base-content/75">
+                        Интерфейс ауыр болмауы керек. Негізгі құндылық — контент.
+                        Сол үшін бұл платформада дизайн минималды, оқуға ыңғайлы,
+                        әрі барлық экранға бейімделген.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <a href="{% url 'home' %}" class="btn btn-primary">Home бетіне оралу</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
